@@ -14,7 +14,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-dark text-white selection:bg-primary selection:text-white w-full max-w-[100vw] overflow-x-hidden">
       {/* 1. Header & Hero Section */}
       <header className="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/5">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <Tool className="text-white w-6 h-6" />
@@ -54,7 +54,7 @@ const App: React.FC = () => {
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/20 blur-[120px] rounded-full -z-10"></div>
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full -z-10"></div>
         
-        <div className="container mx-auto px-6 sm:px-4 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -65,13 +65,13 @@ const App: React.FC = () => {
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
               <span className="text-xs uppercase tracking-widest font-semibold text-white/60">Премиум сервис в Нижнем Новгороде</span>
             </div>
-            <h1 className="text-2xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight break-words">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[1.1] break-words">
               Профессиональный <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Шиномонтаж</span>
             </h1>
-            <p className="text-base sm:text-lg text-white/60 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed">
+            <p className="text-base sm:text-lg text-white/60 mb-10 max-w-2xl mx-auto md:mx-0 leading-relaxed">
               Вернем вашему автомобилю идеальную плавность хода. Высокоточное оборудование Hoffman, опытные мастера и бережное отношение к вашим дискам.
             </p>
-            <div className="w-full max-w-full overflow-hidden flex flex-col items-stretch md:items-start px-4 md:px-0">
+            <div className="w-full max-w-full overflow-hidden flex flex-col items-stretch md:items-start px-0">
               <div className="flex flex-col md:flex-row md:justify-start gap-4 w-full md:w-auto">
                 <a href="#appointment" className="btn-primary w-full md:w-auto text-center flex items-center justify-center gap-2">
                   Записаться на замену <ChevronRight className="w-5 h-5 flex-shrink-0" />
@@ -131,7 +131,7 @@ const App: React.FC = () => {
 
       {/* 2. Services Section */}
       <section id="services" className="py-24 bg-dark-lighter">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-4">Наши Услуги</h2>
             <p className="text-white/60 max-w-2xl mx-auto italic">Полный спектр работ для вашей безопасности на дороге</p>
@@ -165,7 +165,7 @@ const App: React.FC = () => {
       {/* 3. Why Us Section */}
       <section className="py-24 bg-dark relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[160px] rounded-full -z-10"></div>
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative">
               <div className="grid grid-cols-2 gap-4">
@@ -223,7 +223,7 @@ const App: React.FC = () => {
 
       {/* 4. Process (Steps) Section */}
       <section className="py-24 bg-dark-lighter border-y border-white/5">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold mb-4">Как это происходит?</h2>
             <p className="text-white/40 italic text-sm">Всего 3 простых шага до идеальной езды</p>
@@ -252,7 +252,7 @@ const App: React.FC = () => {
 
       {/* 5. Pricing Section */}
       <section id="prices" className="py-24 bg-dark">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="max-w-4xl mx-auto bg-dark-lighter rounded-[40px] border border-white/5 p-8 md:p-16 overflow-hidden relative shadow-2xl">
             <div className="flex flex-col gap-6 mb-12 relative">
               <div>
@@ -292,7 +292,7 @@ const App: React.FC = () => {
 
       {/* 6. Reviews Section */}
       <section id="reviews" className="py-24 bg-dark-lighter relative overflow-hidden">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
               <h2 className="text-4xl font-extrabold mb-4">Что говорят <span className="text-primary">Клиенты</span></h2>
@@ -340,7 +340,7 @@ const App: React.FC = () => {
 
       {/* 7. FAQ Section */}
       <section className="py-24 bg-dark">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold mb-4">Остались вопросы?</h2>
             <p className="text-white/40">Мы собрали самые частые вопросы наших клиентов</p>
@@ -387,7 +387,7 @@ const App: React.FC = () => {
         <div className="absolute top-0 right-0 w-1/3 h-[2px] bg-gradient-to-l from-white/40 to-transparent blur-[10px] z-10"></div>
         
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-white/10 blur-[100px] rounded-full"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 bg-dark p-8 md:p-16 rounded-[40px] shadow-2xl border border-white/10">
             <div className="text-center md:text-left flex-1">
               <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight">Запишитесь на сервис <br /><span className="text-primary">со скидкой 10%</span></h2>
@@ -409,7 +409,7 @@ const App: React.FC = () => {
 
       {/* 9. Map Section */}
       <section className="bg-dark pb-24">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="h-[500px] w-full rounded-[40px] overflow-hidden border border-white/5 relative group grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
             <iframe 
               src="https://yandex.ru/map-widget/v1/?ll=44.006857%2C56.326887&z=16&pt=44.006857%2C56.326887,pm2rdm" 
@@ -426,7 +426,7 @@ const App: React.FC = () => {
 
       {/* 9. Contacts & Footer */}
       <footer id="contacts" className="pt-24 pb-12 bg-dark-lighter">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
             <div className="col-span-1 lg:col-span-1">
               <div className="flex items-center gap-2 mb-8">
