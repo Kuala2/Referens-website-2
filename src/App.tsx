@@ -59,19 +59,20 @@ const App: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="w-full text-center md:text-left"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full mb-6">
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
               <span className="text-xs uppercase tracking-widest font-semibold text-white/60">Премиум сервис в Нижнем Новгороде</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight break-words">
+            <h1 className="text-2xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight break-words">
               Профессиональный <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Шиномонтаж</span>
             </h1>
-            <p className="text-base sm:text-lg text-white/60 mb-10 max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg text-white/60 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed">
               Вернем вашему автомобилю идеальную плавность хода. Высокоточное оборудование Hoffman, опытные мастера и бережное отношение к вашим дискам.
             </p>
-            <div className="w-full max-w-full overflow-hidden">
-              <div className="flex flex-col items-center sm:flex-row sm:justify-start gap-4 w-full px-4 sm:px-0">
+            <div className="w-full max-w-full overflow-hidden flex flex-col items-center md:items-start">
+              <div className="flex flex-col items-center sm:flex-row sm:justify-start gap-4 w-full px-4 sm:px-0 mx-auto sm:mx-0">
                 <a href="#appointment" className="btn-primary w-full max-w-[350px] sm:max-w-none sm:w-auto text-center flex items-center justify-center gap-2">
                   Записаться на замену <ChevronRight className="w-5 h-5 flex-shrink-0" />
                 </a>
@@ -89,7 +90,7 @@ const App: React.FC = () => {
               <div className="w-px h-10 bg-white/10"></div>
               <div className="flex flex-col text-center sm:text-left">
                 <span className="text-2xl font-bold text-white">4000+</span>
-                <span className="text-[10px] uppercase tracking-wider">Довольных клиетов</span>
+                <span className="text-[10px] uppercase tracking-wider">Довольных клиентов</span>
               </div>
               <div className="w-px h-10 bg-white/10"></div>
               <div className="flex flex-col text-center sm:text-left">
