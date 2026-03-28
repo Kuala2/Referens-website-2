@@ -71,11 +71,11 @@ const App: React.FC = () => {
               Вернем вашему автомобилю идеальную плавность хода. Высокоточное оборудование Hoffman, опытные мастера и бережное отношение к вашим дискам.
             </p>
             <div className="w-full max-w-full overflow-hidden">
-              <div className="flex flex-col sm:flex-row gap-4 w-full px-4 sm:px-0">
-                <a href="#appointment" className="btn-primary w-full sm:w-auto text-center flex items-center justify-center gap-2">
+              <div className="flex flex-col items-center sm:flex-row sm:justify-start gap-4 w-full px-4 sm:px-0">
+                <a href="#appointment" className="btn-primary w-full max-w-[350px] sm:max-w-none sm:w-auto text-center flex items-center justify-center gap-2">
                   Записаться на замену <ChevronRight className="w-5 h-5 flex-shrink-0" />
                 </a>
-                <a href="#services" className="px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-bold transition-all hover:bg-white/10 flex items-center justify-center gap-2 w-full sm:w-auto text-center">
+                <a href="#services" className="px-4 sm:px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-bold transition-all hover:bg-white/10 flex items-center justify-center gap-2 w-full max-w-[350px] sm:max-w-none sm:w-auto text-center">
                   Смотреть услуги
                 </a>
               </div>

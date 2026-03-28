@@ -8,7 +8,11 @@ html, body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  min-width: 320px;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 body {
@@ -29,6 +33,6 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply px-8 py-4 bg-primary text-white rounded-xl font-bold transition-all duration-300 transform hover:scale-105 hover:bg-primary-dark shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] active:scale-95;
+    @apply px-4 sm:px-8 py-4 bg-primary text-white rounded-xl font-bold transition-all duration-300 transform hover:scale-105 hover:bg-primary-dark shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] active:scale-95;
   }
 }
