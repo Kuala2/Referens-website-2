@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageCircle, MapPin, Clock, Shield, Award, Star, PenTool as Tool, ChevronRight } from 'lucide-react';
+import { Phone, MapPin, Clock, Shield, Star, Wrench, ChevronRight, Disc, Snowflake, LifeBuoy, PenTool as Tool, Quote, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FaVk, FaTelegramPlane } from 'react-icons/fa';
 
@@ -15,12 +15,18 @@ const App: React.FC = () => {
       {/* 1. Header & Hero Section */}
       <header className="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/5">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Tool className="text-white w-6 h-6" />
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                <Tool className="text-white w-6 h-6" />
+              </div>
+              <span className="text-xl font-display font-extrabold uppercase tracking-tighter">
+                Tire<span className="text-primary">Master</span> NN
+              </span>
             </div>
-            <span className="text-xl font-display font-extrabold uppercase tracking-tighter">
-              Tire<span className="text-primary">Master</span> NN
+            <div className="hidden lg:block w-px h-6 bg-white/10"></div>
+            <span className="text-[10px] text-white/50 uppercase tracking-[0.2em] hidden lg:block leading-none">
+              Шиномонтаж в Нижнем Новгороде
             </span>
           </div>
 
@@ -40,11 +46,10 @@ const App: React.FC = () => {
                 <FaTelegramPlane className="text-lg text-secondary group-hover:scale-110 transition-transform -translate-x-[1px] translate-y-[0.5px]" />
               </a>
             </div>
-            <div className="flex flex-col items-end">
-              <a href="tel:+79990000000" className="text-[11px] sm:text-sm md:text-base font-bold hover:text-primary transition-colors whitespace-nowrap leading-none">+7 999 000 00 00</a>
-              <span className="text-[9px] sm:text-[10px] text-white/40 uppercase tracking-widest leading-none mt-1">Нижний Новгород</span>
+            <div className="flex flex-col items-end mr-2">
+              <a href="tel:+79990000000" className="text-sm md:text-base font-bold hover:text-primary transition-colors whitespace-nowrap leading-none">+7 999 000 00 00</a>
             </div>
-            <a href="#appointment" className="hidden lg:block btn-primary px-6 py-2.5 text-sm text-center">Записаться</a>
+            <a href="#appointment" className="hidden lg:block border border-primary/40 text-primary hover:bg-primary hover:text-white px-5 py-2 text-xs font-bold transition-all rounded-xl uppercase tracking-wider">Записаться</a>
           </div>
         </div>
       </header>
@@ -54,19 +59,20 @@ const App: React.FC = () => {
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/20 blur-[120px] rounded-full -z-10"></div>
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full -z-10"></div>
         
-        <div className="container mx-auto px-6 sm:px-4 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-6 sm:px-4 grid lg:grid-cols-12 gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full text-center md:text-left"
+            className="w-full text-center md:text-left lg:col-span-7"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full mb-6">
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
               <span className="text-xs uppercase tracking-widest font-semibold text-white/60">Премиум сервис в Нижнем Новгороде</span>
             </div>
-            <h1 className="text-2xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight break-words">
-              Профессиональный <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Шиномонтаж</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">
+              <span className="whitespace-nowrap">Профессиональный</span> <br className="hidden lg:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Шиномонтаж</span>
             </h1>
             <p className="text-base sm:text-lg text-white/60 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed">
               Вернем вашему автомобилю идеальную плавность хода. Высокоточное оборудование Hoffman, опытные мастера и бережное отношение к вашим дискам.
@@ -76,7 +82,7 @@ const App: React.FC = () => {
                 <a href="#appointment" className="btn-primary w-full md:w-auto text-center flex items-center justify-center gap-2">
                   Записаться на замену <ChevronRight className="w-5 h-5 flex-shrink-0" />
                 </a>
-                <a href="#services" className="px-4 md:px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-bold transition-all hover:bg-white/10 flex items-center justify-center gap-2 w-full md:w-auto text-center">
+                <a href="#services" className="px-4 md:px-8 py-4 bg-white/5 border border-white/20 rounded-xl font-bold transition-all hover:bg-white/10 flex items-center justify-center gap-2 w-full md:w-auto text-center">
                   Смотреть услуги
                 </a>
               </div>
@@ -85,32 +91,29 @@ const App: React.FC = () => {
             <div className="mt-12 flex items-center gap-8 text-white/40">
               <div className="flex flex-col text-center sm:text-left">
                 <span className="text-2xl font-bold text-white">15+</span>
-                <span className="text-[10px] uppercase tracking-wider">Лет опыта</span>
+                <span className="text-[10px] uppercase tracking-wider text-white/60">Лет опыта</span>
               </div>
               <div className="w-px h-10 bg-white/10"></div>
               <div className="flex flex-col text-center sm:text-left">
                 <span className="text-2xl font-bold text-white">4000+</span>
-                <span className="text-[10px] uppercase tracking-wider">Довольных клиентов</span>
+                <span className="text-[10px] uppercase tracking-wider text-white/60">Довольных клиентов</span>
               </div>
               <div className="w-px h-10 bg-white/10"></div>
               <div className="flex flex-col text-center sm:text-left">
                 <span className="text-2xl font-bold text-white">6 мес.</span>
-                <span className="text-[10px] uppercase tracking-wider">Гарантии</span>
+                <span className="text-[10px] uppercase tracking-wider text-white/60">Гарантии</span>
               </div>
             </div>
           </motion.div>
           
           <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="relative"
+            className="relative lg:col-span-5"
           >
             <div className="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?q=80&w=2071&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?q=80&w=1600&auto=format&fit=crop" 
                 alt="Профессиональный шиномонтаж" 
-                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                className="w-full h-auto object-cover rounded-3xl"
               />
             </div>
             {/* Floating badge */}
@@ -139,22 +142,24 @@ const App: React.FC = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[ 
-              { title: "Сезонная переобувка", desc: "Комплексная замена шин с балансировкой и проверкой давления.", icon: Tool, price: "от 1 800 ₽" },
+              { title: "Сезонная переобувка", desc: "Комплексная замена шин с балансировкой и проверкой давления.", icon: Snowflake, price: "от 1 800 ₽" },
               { title: "Выездной шиномонтаж", desc: "Приедем к вам в любую точку города в течение 30 минут.", icon: MapPin, price: "от 2 500 ₽" },
-              { title: "Правка дисков", desc: "Восстановление геометрии литых и стальных дисков на стенде.", icon: Award, price: "от 1 200 ₽" },
+              { title: "Правка дисков", desc: "Восстановление геометрии литых и стальных дисков на стенде.", icon: Disc, price: "от 1 200 ₽" },
               { title: "Хранение шин", desc: "Соблюдение температурного режима и влажности. Застраховано.", icon: Shield, price: "от 2 000 ₽ / сезон" },
-              { title: "Ремонт порезов", desc: "Устранение грыж и боковых порезов любой сложности.", icon: MessageCircle, price: "от 500 ₽" },
-              { title: "Ошиповка", desc: "Восстановление выпавших шипов на зимней резине.", icon: Tool, price: "от 15 ₽ / шип" }
+              { title: "Ремонт порезов", desc: "Устранение грыж и боковых порезов любой сложности.", icon: LifeBuoy, price: "от 500 ₽" },
+              { title: "Ошиповка", desc: "Восстановление выпавших шипов на зимней резине.", icon: Wrench, price: "от 15 ₽ / шип" }
             ].map((s, i) => (
-              <div key={i} className="p-8 bg-dark rounded-2xl border border-white/5 hover:border-primary/30 transition-all group">
+              <div key={i} className="p-8 bg-dark rounded-2xl border border-white/5 hover:border-primary/50 hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full shadow-lg hover:shadow-primary/10">
                 <div className="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                   <s.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-                <p className="text-white/40 text-sm mb-6 leading-relaxed">{s.desc}</p>
-                <div className="flex items-center justify-between">
+                <p className="text-white/60 text-sm mb-6 leading-relaxed">{s.desc}</p>
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
                   <span className="text-primary font-bold">{s.price}</span>
-                  <a href="#appointment" className="text-xs uppercase tracking-widest font-bold flex items-center gap-1 hover:text-primary transition-colors cursor-pointer">Подробнее <ChevronRight className="w-4 h-4" /></a>
+                  <a href="#appointment" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-1 text-white/40 group-hover:text-primary transition-colors cursor-pointer">
+                    Подробнее <ChevronRight className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             ))}
@@ -168,22 +173,22 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="h-64 rounded-2xl overflow-hidden transition-all duration-500">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="space-y-6">
+                  <div className="h-64 rounded-2xl overflow-hidden shadow-2xl">
                     <img src="/images/1.png" alt="Tire Service 1" className="w-full h-full object-cover" />
                   </div>
                   <div className="p-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 text-center">
-                    <div className="text-3xl font-extrabold mb-1">100%</div>
-                    <div className="text-[10px] text-white/40 uppercase tracking-widest">Гарантия качества</div>
+                    <div className="text-4xl font-black mb-2">100%</div>
+                    <div className="text-[11px] text-white/60 uppercase tracking-[0.2em] font-bold">Гарантия качества</div>
                   </div>
                 </div>
-                <div className="space-y-4 pt-8">
-                  <div className="p-8 bg-primary rounded-2xl text-center text-white">
-                    <div className="text-3xl font-extrabold mb-1">20 мин.</div>
-                    <div className="text-[10px] text-white/80 uppercase tracking-widest">Среднее время ожидания</div>
+                <div className="space-y-6 pt-12">
+                  <div className="p-8 bg-primary rounded-2xl text-center text-white shadow-xl shadow-primary/20">
+                    <div className="text-4xl font-black mb-2">20 мин.</div>
+                    <div className="text-[11px] text-white/90 uppercase tracking-[0.2em] font-bold">Время ожидания</div>
                   </div>
-                  <div className="h-64 rounded-2xl overflow-hidden transition-all duration-500">
+                  <div className="h-64 rounded-2xl overflow-hidden shadow-2xl">
                     <img src="/images/2.png" alt="Tire Service 2" className="w-full h-full object-cover" />
                   </div>
                 </div>
@@ -210,8 +215,8 @@ const App: React.FC = () => {
                       <div className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform"></div>
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold mb-1">{item.title}</h4>
-                      <p className="text-white/40 text-sm leading-relaxed">{item.text}</p>
+                      <h4 className="text-xl font-bold mb-1">{item.title}</h4>
+                      <p className="text-white/60 text-[15px] leading-relaxed">{item.text}</p>
                     </div>
                   </motion.li>
                 ))}
@@ -224,26 +229,26 @@ const App: React.FC = () => {
       {/* 4. Process (Steps) Section */}
       <section className="py-24 bg-dark-lighter border-y border-white/5">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold mb-4">Как это происходит?</h2>
-            <p className="text-white/40 italic text-sm">Всего 3 простых шага до идеальной езды</p>
+            <p className="text-white/60 italic text-sm">Всего 3 простых шага до идеальной езды</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto items-center relative">
+          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto relative">
             {/* Connection line */}
-            <div className="hidden md:block absolute top-[60px] left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/10 to-transparent -z-10"></div>
+            <div className="hidden md:block absolute top-10 left-[15%] w-[70%] h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent -z-10"></div>
             
             {[
               { num: "01", title: "Запись", text: "Оставляете заявку на сайте или звоните нам." },
               { num: "02", title: "Заезд", text: "Приезжаете в удобное время. Мы уже ждем." },
               { num: "03", title: "Замена", text: "Мы выполняем работу за 20-30 минут." }
             ].map((step, i) => (
-              <div key={i} className="text-center group">
-                <div className="w-16 h-16 rounded-2xl bg-dark border border-white/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:border-primary transition-all rotate-3 group-hover:rotate-0">
-                  <span className="text-xl font-extrabold group-hover:text-white transition-colors">{step.num}</span>
+              <div key={i} className="text-center group relative">
+                <div className="w-20 h-20 rounded-3xl bg-dark border border-white/5 flex items-center justify-center mx-auto mb-8 group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-500 shadow-xl">
+                  <span className="text-2xl font-black text-primary group-hover:scale-110 transition-transform">{step.num}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-white/40 text-sm">{step.text}</p>
+                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                <p className="text-white/60 text-sm leading-relaxed max-w-[250px] mx-auto">{step.text}</p>
               </div>
             ))}
           </div>
@@ -261,30 +266,31 @@ const App: React.FC = () => {
               </div>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-3">
               {[
-                { size: "R13 - R14", price: "1 800 ₽", active: false },
-                { size: "R15", price: "2 200 ₽", active: false },
-                { size: "R16 - R17", price: "2 600 ₽", active: false },
-                { size: "R18 - R19", price: "3 200 ₽", active: false },
-                { size: "R20+", price: "от 4 000 ₽", active: false }
+                { size: "R13 - R14", price: "1 800 ₽" },
+                { size: "R15", price: "2 200 ₽" },
+                { size: "R16 - R17", price: "2 600 ₽" },
+                { size: "R18 - R19", price: "3 200 ₽" },
+                { size: "R20+", price: "от 4 000 ₽" }
               ].map((row, i) => (
-                <div key={i} className={`flex items-center justify-between p-6 rounded-2xl border transition-all ${row.active ? 'bg-primary/5 border-primary/20 scale-[1.02]' : 'border-white/5 hover:border-white/10 bg-white/2'}`}>
+                <div key={i} className="flex items-center justify-between p-5 md:p-6 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-white/5 transition-all cursor-default group">
                   <div className="flex items-center gap-4">
-                    <span className="font-bold text-lg">{row.size}</span>
-                    {row.active && <span className="hidden sm:inline-block text-[10px] text-primary uppercase font-bold tracking-widest ml-2 italic">Популярно</span>}
+                    <span className="font-bold text-lg md:text-xl text-white/90">{row.size}</span>
                   </div>
                   <div className="flex items-center gap-6">
-                    <span className="text-xl font-black">{row.price}</span>
-                    <a href="#appointment" className="hidden sm:block text-[11px] uppercase tracking-wider font-bold bg-primary px-5 py-2 rounded-xl text-white hover:bg-primary/90 transition-all hover:scale-105 shadow-md active:scale-95">Записаться</a>
+                    <span className="text-xl md:text-2xl font-black text-white">{row.price}</span>
                   </div>
                 </div>
               ))}
             </div>
             
-            <div className="mt-12 text-center">
-              <p className="text-xs text-white/30 italic mb-8">*Цены указаны за легковые автомобили. Кроссоверы и внедорожники +20%.</p>
-              <button className="btn-primary w-full sm:w-auto">Скачать полный прайс-лист (.pdf)</button>
+            <div className="mt-12">
+              <p className="text-sm text-white/50 italic mb-10 text-center">* Цены указаны за легковые автомобили. Кроссоверы и внедорожники +20% к стоимости.</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#appointment" className="btn-primary w-full sm:w-auto text-center">Записаться на сервис</a>
+                <button className="px-8 py-4 border border-white/10 rounded-xl font-bold hover:bg-white/5 transition-all w-full sm:w-auto text-white/60 hover:text-white">Скачать прайс (.pdf)</button>
+              </div>
             </div>
           </div>
         </div>
@@ -293,20 +299,24 @@ const App: React.FC = () => {
       {/* 6. Reviews Section */}
       <section id="reviews" className="py-24 bg-dark-lighter relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-6">
             <div>
               <h2 className="text-4xl font-extrabold mb-4">Что говорят <span className="text-primary">Клиенты</span></h2>
-              <p className="text-white/40 italic">Более 500 положительных отзывов на Яндекс.Картах</p>
-            </div>
-            <div className="flex gap-2">
-              <div className="px-4 py-2 bg-white/5 rounded-lg border border-white/10 flex items-center gap-2">
-                <span className="text-yellow-500 font-bold">5.0</span>
-                <div className="flex text-yellow-500">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
-                </div>
-                <span className="text-[10px] text-white/40 uppercase font-bold ml-2">Яндекс</span>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <p className="text-white/60 font-medium">Более 500 положительных отзывов</p>
+                <div className="hidden sm:block w-px h-4 bg-white/10"></div>
+                <a href="https://yandex.ru/maps" target="_blank" rel="noreferrer" className="flex items-center gap-2 group cursor-pointer">
+                  <span className="text-yellow-500 font-bold">5.0</span>
+                  <div className="flex text-yellow-500">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current" />)}
+                  </div>
+                  <span className="text-[10px] text-white/40 uppercase font-black tracking-widest group-hover:text-primary transition-colors">Яндекс.Карты</span>
+                </a>
               </div>
             </div>
+            <a href="https://yandex.ru/maps" target="_blank" rel="noreferrer" className="hidden lg:flex px-6 py-3 bg-white/5 border border-white/10 rounded-xl items-center gap-2 font-bold hover:bg-white/10 transition-all text-sm group">
+              Читать все отзывы <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -315,35 +325,41 @@ const App: React.FC = () => {
               { name: "Мария С.", date: "1 месяц назад", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop", text: "Очень чистый бокс, вежливый персонал. Пока меняли резину, пила кофе в уютной зоне ожидания. Все быстро и профессионально. Рекомендую!", rating: 5 },
               { name: "Дмитрий В.", date: "3 дня назад", avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop", text: "Оборудование реально новое, Hoffman. Балансировка идеальная, на трассе руль не бьет. Цены адекватные для такого уровня сервиса.", rating: 5 }
             ].map((review, i) => (
-              <div key={i} className="p-8 bg-dark rounded-3xl border border-white/5 relative group hover:border-primary/20 transition-all">
+              <div key={i} className="p-8 bg-dark rounded-3xl border border-white/10 relative group hover:border-primary/20 transition-all shadow-xl">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20">
                     <img src={review.avatar} alt={review.name} className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <div className="font-bold">{review.name}</div>
-                    <div className="text-[10px] text-white/20 uppercase tracking-widest">{review.date}</div>
+                    <div className="font-bold text-lg">{review.name}</div>
+                    <div className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold">{review.date}</div>
                   </div>
                 </div>
-                <div className="flex text-yellow-500 mb-4">
+                <div className="flex text-yellow-500 mb-5">
                   {[...Array(review.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
                 </div>
-                <p className="text-white/60 text-sm leading-relaxed italic">"{review.text}"</p>
-                <div className="absolute top-8 right-8 text-white/5">
-                  <MessageCircle className="w-12 h-12" />
+                <p className="text-white/70 text-[15px] leading-relaxed relative z-10">"{review.text}"</p>
+                <div className="absolute top-8 right-8 text-white/5 pointer-events-none">
+                  <Quote className="w-16 h-16 fill-current" />
                 </div>
               </div>
             ))}
+          </div>
+          
+          <div className="mt-12 text-center lg:hidden">
+            <a href="https://yandex.ru/maps" target="_blank" rel="noreferrer" className="inline-flex px-8 py-4 bg-white/5 border border-white/10 rounded-xl items-center gap-2 font-bold hover:bg-white/10 transition-all text-sm group">
+              Читать все отзывы на Яндексе <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
         </div>
       </section>
 
       {/* 7. FAQ Section */}
       <section className="py-24 bg-dark">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold mb-4">Остались вопросы?</h2>
-            <p className="text-white/40">Мы собрали самые частые вопросы наших клиентов</p>
+            <p className="text-white/60">Мы собрали самые частые вопросы наших клиентов</p>
           </div>
           
           <div className="space-y-4">
@@ -360,7 +376,7 @@ const App: React.FC = () => {
               >
                 <div className="flex items-center justify-between">
                   <h4 className={`font-bold text-lg transition-colors ${activeFaq === i ? 'text-primary' : ''}`}>{item.q}</h4>
-                  <ChevronRight className={`w-5 h-5 text-primary transition-transform duration-300 ${activeFaq === i ? 'rotate-90' : ''}`} />
+                  <ChevronDown className={`w-5 h-5 text-primary transition-transform duration-300 ${activeFaq === i ? 'rotate-180' : ''}`} />
                 </div>
                 {activeFaq === i && (
                   <motion.div 
@@ -369,7 +385,7 @@ const App: React.FC = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="text-white/40 text-sm leading-relaxed mt-4 pt-4 border-t border-white/5">
+                    <p className="text-white/60 text-[15px] leading-relaxed mt-4 pt-6 border-t border-white/5 pb-2">
                       {item.a}
                     </p>
                   </motion.div>
@@ -380,7 +396,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <section id="appointment" className="py-24 bg-dark relative overflow-hidden">
+      <section id="appointment" className="py-32 bg-dark relative overflow-hidden scroll-mt-40 flex items-center min-h-[70vh]">
         {/* Horizontal Glowing Separator */}
         <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-l from-white/20 via-white/5 to-transparent z-20"></div>
         <div className="absolute top-0 right-0 w-1/2 h-px bg-gradient-to-l from-primary/30 to-transparent blur-[4px] z-10"></div>
