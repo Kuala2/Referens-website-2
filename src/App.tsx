@@ -406,8 +406,8 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 bg-dark p-8 md:p-16 rounded-[40px] shadow-2xl border border-white/10">
             <div className="text-center md:text-left flex-1">
-              <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight">Запишитесь на сервис <br /><span className="text-primary">со скидкой 10%</span></h2>
-              <p className="text-white/40">Оставьте заявку сейчас и получите бонус на первое посещение</p>
+              <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight text-white">Запишитесь на сервис <br /><span className="text-primary">со скидкой 10%</span></h2>
+              <p className="text-white/60 text-lg">Оставьте заявку сейчас и получите бонус на первое посещение</p>
             </div>
             
             <div className="hidden md:block relative">
@@ -416,17 +416,61 @@ const App: React.FC = () => {
             </div>
             
             <div className="w-full md:w-auto flex flex-col gap-4 flex-1">
-              <input type="tel" placeholder="+7 (___) ___-__-__" className="bg-white/5 border border-white/10 px-8 py-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-lg font-bold" />
+              <input type="tel" placeholder="+7 (___) ___-__-__" className="bg-white/10 border border-white/20 px-8 py-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-lg font-bold text-white placeholder:text-white/20 w-full" />
               <button className="btn-primary w-full py-5 text-lg">Получить скидку</button>
+              <p className="text-[10px] text-white/30 text-center leading-tight">
+                Нажимая на кнопку, вы соглашаетесь с <a href="#" className="underline hover:text-primary">политикой обработки данных</a> в соответствии с ФЗ-152.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12 max-w-4xl mx-auto">
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden group">
+              {/* Subtle background glow */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[60px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+              
+              <div className="grid md:grid-cols-3 gap-12 relative z-10">
+                <div className="flex flex-col items-center text-center group/item">
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover/item:bg-primary transition-all duration-500 shadow-lg border border-primary/20">
+                    <MapPin className="text-primary w-7 h-7 group-hover/item:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <div className="text-white/40 text-[10px] uppercase tracking-[0.2em] mb-2 font-black">Адрес</div>
+                    <div className="font-bold text-white text-base leading-snug">г. Нижний Новгород,<br /> пл. Минина и Пожарского</div>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col items-center text-center group/item">
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover/item:bg-primary transition-all duration-500 shadow-lg border border-primary/20">
+                    <Phone className="text-primary w-7 h-7 group-hover/item:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <div className="text-white/40 text-[10px] uppercase tracking-[0.2em] mb-2 font-black">Телефон</div>
+                    <div className="font-bold text-xl text-white">
+                      <a href="tel:+79990000000" className="hover:text-primary transition-colors">+7 999 000 00 00</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col items-center text-center group/item">
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover/item:bg-primary transition-all duration-500 shadow-lg border border-primary/20">
+                    <Clock className="text-primary w-7 h-7 group-hover/item:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <div className="text-white/40 text-[10px] uppercase tracking-[0.2em] mb-2 font-black">Режим работы</div>
+                    <div className="font-bold text-white text-base leading-snug">Круглосуточно,<br /> 24/7 без выходных</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 9. Map Section */}
-      <section className="bg-dark pb-24">
+      <section id="contacts" className="bg-dark pb-24">
         <div className="container mx-auto px-4">
-          <div className="h-[500px] w-full rounded-[40px] overflow-hidden border border-white/5 relative group grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+          <div className="h-[450px] rounded-[40px] overflow-hidden border border-white/10 relative group grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
             <iframe 
               src="https://yandex.ru/map-widget/v1/?ll=44.006857%2C56.326887&z=16&pt=44.006857%2C56.326887,pm2rdm" 
               width="100%" 
